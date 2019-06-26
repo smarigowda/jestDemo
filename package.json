@@ -1,0 +1,17 @@
+{
+  "name": "jestDemo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:smarigowda/jestDemo.git",
+  "author": "Santosh Marigowda <santosharakere@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --watch src/sum.test.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0"
+  }
+}
