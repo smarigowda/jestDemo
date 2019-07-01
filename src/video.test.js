@@ -1,28 +1,25 @@
 const video = require("./video");
 
-console.log(video.play2());
-
 test("plays video", () => {
-  const spy = jest.spyOn(video, "play");
-  const isPlaying = video.play();
-  const isPlaying2 = video.play2();
-  console.log(isPlaying2);
+  const spy = jest.spyOn(video, "playOne");
+  const isPlaying1 = video.playOne();
+  const isPlaying2 = video.playTwo();
 
   expect(spy).toHaveBeenCalled();
-  expect(isPlaying).toBe(true);
+  expect(isPlaying1).toBe(true);
+  expect(isPlaying2).toBe(true);
 
   spy.mockRestore();
 });
 
 test("plays video, mock implementation", () => {
-  const spy = jest.spyOn(video, "play").mockImplementation(() => false);
-  const isPlaying = video.play();
-
-  const isPlaying2 = video.play2();
-  console.log(isPlaying2);
+  const spy = jest.spyOn(video, "playOne").mockImplementation(() => false);
+  const isPlaying1 = video.playOne();
+  const isPlaying2 = video.playTwo();
 
   expect(spy).toHaveBeenCalled();
-  expect(isPlaying).toBe(false);
+  expect(isPlaying1).toBe(false);
+  expect(isPlaying2).toBe(false);
 
   spy.mockRestore();
 });

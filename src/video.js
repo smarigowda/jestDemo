@@ -1,9 +1,9 @@
 const video = {
-  play() {
+  playOne() {
     return true;
   },
-  play2() {
-      return this.play();
+  playTwo() {
+      return this.playOne();
   }
 };
 
