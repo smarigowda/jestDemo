@@ -6,7 +6,7 @@
   "author": "Santosh Marigowda <santosharakere@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest --watch src/sum.test.js"
+    "test": "jest --watch src/*.test.js"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
